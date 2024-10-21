@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="main">
+      <h1 class="animate__animated animate__slideInUp">
+        storing data into objects
+      </h1>
+      <h3 class="animate__animated animate__rollIn">Your Name</h3>
+      <input type="text" placeholder="Enter Your Name" id="input-1" />
+      <br />
+      <h3 class="animate__animated animate__rollIn">Father Name</h3>
+      <input type="text" placeholder="Enter Your Father Name" id="input-2" />
+      <br />
+      <h3 class="animate__animated animate__rollIn">Qualification</h3>
+      <input type="text" placeholder="Enter Your Qualification" id="input-3" />
+      <br />
+      <h3 class="animate__animated animate__rollIn">Contact Number</h3>
+      <input type="number" placeholder="Enter Your Number" id="input-4" />
+      <br />
+      <br />
+      <button
+        onclick="submit()"
+        id="btn"
+        class="animate__animated animate__rotateIn"
+      >
+        Submit
+      </button>
+    </div>
+    <script>
+      alert("After submit ! your information was store in array on console");
+      var array = [];
+      function submit() {
+        var obj = {
+          name: document.getElementById("input-1").value,
+          fathername: document.getElementById("input-2").value,
+          qualification: document.getElementById("input-3").value,
+          contactnumber: document.getElementById("input-4").value,
+        };
+        array.push(obj);
+        console.log(array);
+      }
+    </script>
+  </body>
+</html>
